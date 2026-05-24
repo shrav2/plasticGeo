@@ -1,9 +1,9 @@
 Package: plasticGeo
-Title: What the Package Does (One Line, Title Case)
+Title: Plastic Waste Analysis
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+    person("Shravani", "Subramanian", , "first.last@example.com", role = c("aut", "cre"))
+Description: This package aids in the analysis of Plastic Waste collected through the Break Free from Plastic movement. We have also included data for Nigeria from the Earth Challenge 2020. This included beach-cleanup data for various neighborhoods in Rivers and Port-harcourt. 
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
