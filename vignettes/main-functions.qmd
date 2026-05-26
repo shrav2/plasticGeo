@@ -17,3 +17,10 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(plasticGeo)
 ```
+
+```{r}
+#| eval: fasle
+top_plastic_items(nigeria_data, neighborhood = "Agege", n = 3)
+```
+
+> This function will take in a neighborhood in Nigeria out of the 6 neighborhoods we have data on and output the top 3 plastic items and counts for each type of plastic item. 
