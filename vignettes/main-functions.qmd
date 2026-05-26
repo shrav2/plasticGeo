@@ -24,3 +24,18 @@ top_plastic_items(nigeria_data, neighborhood = "Agege", n = 3)
 ```
 
 > This function will take in a neighborhood in Nigeria out of the 6 neighborhoods we have data on and output the top 3 plastic items and counts for each type of plastic item. 
+
+```{r}
+#| eval: false
+plot_temp_plastic_hex(plastic_temp_gdp, country_label = "Nigeria")
+```
+>This function should create a hexbin plot comparing mean annual temperature and total plastic collected. It should find the country with the highest total plastic collected, highlight that point, and label it with the country name. It will also include a linear trend line and a fill scale showing the number of countries in each hexbin.
+
+
+```{r}
+#| eval: false
+top_plastic_cards(data = nigeria_data, item_cols = c(plastic_bottles, bottle_caps, wrappers_labels), n_items = 3,
+title = "Counts for the Top 3 Plastic Items Found in Lagos & Rivers Beach Cleanups"
+)
+```
+>This function would shorten the dashboard code by adding up the plastic item columns, ranking the items by total count, and displaying the top 3 as value boxes. We could call one function and reuse it for different locations, years, or plastic item groups.
