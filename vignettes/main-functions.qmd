@@ -19,7 +19,7 @@ library(plasticGeo)
 ```
 
 ```{r}
-#| eval: fasle
+#| eval: false
 top_plastic_items(nigeria_data, neighborhood = "Agege", n = 3)
 ```
 
