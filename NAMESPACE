@@ -2,4 +2,10 @@
 
 export(load_nigeria_data)
 export(load_plastic_data)
+export(plot_temp_plastic_hex)
+export(top_plastic_items)
+import(dplyr)
+import(ggplot2)
+import(stringr)
+import(tidyr)
 importFrom(readr,read_csv)

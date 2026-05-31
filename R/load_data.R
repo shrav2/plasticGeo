@@ -9,7 +9,7 @@
 #'
 #' @export
 load_plastic_data <- function(){
-   plastic_data <- readr::read_csv("https://raw.githubusercontent.com/shrav2/Environmental-Plastic-Waste-Analysis/main/stat431-meta.csv")
+   readr::read_csv("https://raw.githubusercontent.com/shrav2/Environmental-Plastic-Waste-Analysis/main/stat431-meta.csv")
 }
 
 #' Load Nigeria Dataset
@@ -22,6 +22,6 @@ load_plastic_data <- function(){
 #'
 #' @export
 load_nigeria_data <- function(){
-   nigeria_data <- readr::read_csv("https://raw.githubusercontent.com/shrav2/Environmental-Plastic-Waste-Analysis/main/Nigeria%20Data.csv")
+   readr::read_csv("https://raw.githubusercontent.com/shrav2/Environmental-Plastic-Waste-Analysis/main/Nigeria%20Data.csv")
 
 }
