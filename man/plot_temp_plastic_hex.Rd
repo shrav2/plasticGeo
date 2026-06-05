@@ -4,10 +4,7 @@
 \alias{plot_temp_plastic_hex}
 \title{Plot Temperature and Plastic Collected}
 \usage{
-plot_temp_plastic_hex(data)
-}
-\arguments{
-\item{data}{A data frame with AnnualMeanTemp, grand_total, and Country.}
+plot_temp_plastic_hex()
 }
 \value{
 A ggplot object.
