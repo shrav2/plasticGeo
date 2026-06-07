@@ -12,10 +12,15 @@ Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 8.0.0
 Imports: 
+    arrow,
+    broom,
     dplyr,
     ggplot2,
+    gt,
     hexbin,
     readr,
+    scales,
+    stats,
     stringr,
     tidyr
 Suggests: 

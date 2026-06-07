@@ -10,5 +10,7 @@ plot_temp_plastic_hex()
 A ggplot object.
 }
 \description{
-Creates a hexbin plot comparing mean annual temperature and total plastic collected.
+Shows the relationship between mean annual temperature and total
+plastic collected using a hexbin plot of plastic counts, with a fitted linear
+trend line and label of the country with the highest collection total.
 }

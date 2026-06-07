@@ -1,5 +1,11 @@
 #' Clean the Nigeria plastic pollution dataset
 #'
+#' Cleans the Nigeria plastic pollution dataset by extracting neighborhood
+#' names from location strings, converting plastic count variables from wide
+#' to tidy long format, and recoding plastic type names to more descriptive categories.
+#'
+#' @return A tibble with neighborhood, plastic type, and count cleaned.
+#'
 #' @return A tibble with neighborhood, plastic type, and count cleaned.
 #'
 #' @importFrom dplyr recode mutate
@@ -7,6 +13,7 @@
 #' @importFrom stringr str_extract str_squish str_remove str_to_title str_replace_all
 #'
 #' @export
+
 clean_nigeria <- function() {
   load_nigeria_data() |>
     mutate(

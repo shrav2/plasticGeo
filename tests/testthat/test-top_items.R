@@ -5,7 +5,7 @@ test_that("top_plastic_items returns top n plastic types for a neighborhood", {
   expect_equal(nrow(result), 3)
   expect_named(result, c("Plastic Type", "Count"))
   expect_true(is.numeric(result$Count))
-  expect_equal(result$count, sort(result$count, decreasing = TRUE))
+  expect_equal(result$Count, sort(result$Count, decreasing = TRUE))
 
   expect_equal(result$`Plastic Type`, c(
     "Plastic Bottles",

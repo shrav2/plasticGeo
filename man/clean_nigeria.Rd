@@ -8,7 +8,11 @@ clean_nigeria()
 }
 \value{
 A tibble with neighborhood, plastic type, and count cleaned.
+
+A tibble with neighborhood, plastic type, and count cleaned.
 }
 \description{
-Clean the Nigeria plastic pollution dataset
+Cleans the Nigeria plastic pollution dataset by extracting neighborhood
+names from location strings, converting plastic count variables from wide
+to tidy long format, and recoding plastic type names to more descriptive categories.
 }

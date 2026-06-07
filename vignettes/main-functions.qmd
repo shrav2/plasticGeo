@@ -20,22 +20,47 @@ library(plasticGeo)
 
 ```{r}
 #| eval: false
+load_plastic_data()
+```
+### This function imports the dataset containing plastic cleanup information for different countries around the world, provided by the Break Free From Plastic movement. The dataset also includes annual mean temperatures for each country for the years 2019 and 2020. A tibble is returned with the plastic cleanup and temperature data. There are two rows for each country (one for 2019 data, and one for 2020 data).
+
+```{r}
+#| eval: false
+load_nigeria_data()
+```
+### This function imports the dataset containing plastic cleanup information for only Nigeria, provded by the Earth Challenge 2020. A tibble is returned with the plastic cleanup data for different neighborhoods in Nigeria. 
+
+```{r}
+clean_nigeria()
+```
+### This function cleans the dataset containing plastic collection data for beaches in various neighborhoods in Nigeria so it can be used for analysis. It extracts neighborhood names and renames categories so they are more clear and readable. The resulting dataset makes it easier to summarize and compare plastic pollution patterns across neighborhoods in Nigeria. 
+
+```{r}
+#| eval: false
 top_plastic_items(neighborhood = "Agege", n = 3)
 ```
+### This function accepts a neighborhood in Nigeria out of 6 valid neighborhoods: Agege, Amuwo Odofin, Apapa, Eti Osa, Ibeju Lekki, Port-Harcourt, and Surulere. Based on the inputted neighborhood, the function outputs a tibble with counts of the top 3 plastic items collected in that specified neighborhood.
 
-### This function will take in a neighborhood in the Nigeria dataset (Agege, Amuwo Odofin, Apapa, Eti Osa, Ibeju Lekki, Port-Harcourt, Surulere) we have data on and output the top 3 plastic items and counts for each type of plastic item. 
+```{r}
+#| eval: false
+temp_summary("continent")
+```
+### This function calculates summary statistics for the total plastic collected globally, and groups the statistics based on its "group" argument. It accepts "continent" or "temp_bin" for the "group" argument and will calculate the statistics by continent or by temperature bins. 
 
 ```{r}
 #| eval: false
 plot_temp_plastic_hex()
 ```
-### This function should create a hexbin plot comparing mean annual temperature and total plastic collected. It should find the country with the highest total plastic collected, highlight that point, and label it with the country name. It will also include a linear trend line and a fill scale showing the number of countries in each hexbin.
-
+### This function creates a hexbin plot comparing mean annual temperature and total plastic collected for all countries. The hexagons on the plot are shaded based on the number of countries with a specific temperature and total plastic combination. The point on the plot corresponding with the highest plastic collected total is labeled with its country name. The outputted plot also has a linear reference line to show the relationship between mean annual temperature and total plastic.
 
 ```{r}
 #| eval: false
-top_plastic_cards(item_cols = c(plastic_bottles, bottle_caps, wrappers_labels), n_items = 3,
-title = "Counts for the Top 3 Plastic Items Found in Lagos & Rivers Beach Cleanups"
-)
+temp_by_cont_plot()
 ```
-### This function would shorten the dashboard code by adding up the plastic item columns, ranking the items by total count, and displaying the top 3 as value boxes. We could call one function and reuse it for different locations, years, or plastic item groups.
+### This function creates a scatterplot comparing annual mean temperature and total plastic collected for all countries. The datapoints are colored by country so that regional patterns and differences can be easily identified. 
+
+```{r}
+#| eval: false
+analyze_plastic(log_transform = TRUE)
+```
+### This function fits a simple regression model (Total Plastic Collected vs. Annual Mean Temperature) on the dataset containing plastic collection for all countries. By default, the function returns the simple regression results for the model with the log-transformed Total Plastic Collected variable. If the user specifies the log_transform argument to be FALSE, the function returns the simple regression results for the model with the raw Total Plastic Collected counts.

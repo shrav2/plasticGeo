@@ -1,3 +1,5 @@
+#' Calculate plastic type collected counts
+#'
 #' Get the top n plastic types & counts for each type in the neighborhood specified in Nigeria.
 #'
 #' @param neighborhood A character string of a neighborhood in Nigeria in the data.
@@ -10,6 +12,7 @@
 #' @return A tibble of top plastic types with counts.
 #'
 #' @export
+
 top_plastic_items <- function(neighborhood, n){
 
   validate_neighborhood(neighborhood)

@@ -1,27 +1,45 @@
 #' Load Plastic Waste Dataset
 #'
-#' Downloads the environmental plastic waste dataset
-#' used for temperature and cleanup analysis from the Break Free From Plastic movement.
+#' Loads a cleaned plastic waste dataset containing plastic types, collection
+#' counts, and mean annual temperatures for different countries used to analyze
+#' relationships between plastic collection totals and climate conditions.
 #'
-#' @return A tibble containing plastic waste collection data from the Break Free From Plastic movement.
+#' @return A tibble containing plastic waste collection data from the Break Free
+#' From Plastic movement.
 #'
 #' @importFrom readr read_csv
 #'
 #' @export
-load_plastic_data <- function(){
-   readr::read_csv("https://raw.githubusercontent.com/shrav2/Environmental-Plastic-Waste-Analysis/main/stat431-meta.csv")
+
+load_plastic_data <- function() {
+  path <- system.file(
+    "extdata",
+    "plastic.parquet",
+    package = "plasticGeo"
+  )
+
+  arrow::read_parquet(path)
 }
 
 #' Load Nigeria Dataset
 #'
-#' Downloads outside data from the Earth Challenge 2020 for beach-cleanups in Nigeria.
+#' Loads beach cleanup data collected in Nigeria through the Earth Challenge
+#' 2020 initiative, including neighborhood information and plastic collection
+#' counts for different types of plastic.
 #'
-#' @return A tibble containing plastic waste collection data from the Break Free From Plastic movement.
+#' @return A tibble containing plastic waste collection data from the Break Free
+#' From Plastic movement.
 #'
 #' @importFrom readr read_csv
 #'
 #' @export
-load_nigeria_data <- function(){
-   readr::read_csv("https://raw.githubusercontent.com/shrav2/Environmental-Plastic-Waste-Analysis/main/Nigeria%20Data.csv")
 
+load_nigeria_data <- function() {
+  file_path <- system.file(
+    "extdata",
+    "Nigeria Data.csv",
+    package = "plasticGeo"
+  )
+
+  read_csv(file_path, show_col_types = FALSE)
 }

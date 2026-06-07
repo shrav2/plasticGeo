@@ -2,7 +2,7 @@
 % Please edit documentation in R/top_items.R
 \name{top_plastic_items}
 \alias{top_plastic_items}
-\title{Get the top n plastic types & counts for each type in the neighborhood specified in Nigeria.}
+\title{Calculate plastic type collected counts}
 \usage{
 top_plastic_items(neighborhood, n)
 }

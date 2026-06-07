@@ -7,8 +7,11 @@
 load_nigeria_data()
 }
 \value{
-A tibble containing plastic waste collection data from the Break Free From Plastic movement.
+A tibble containing plastic waste collection data from the Break Free
+From Plastic movement.
 }
 \description{
-Downloads outside data from the Earth Challenge 2020 for beach-cleanups in Nigeria.
+Loads beach cleanup data collected in Nigeria through the Earth Challenge
+2020 initiative, including neighborhood information and plastic collection
+counts for different types of plastic.
 }

@@ -7,9 +7,11 @@
 load_plastic_data()
 }
 \value{
-A tibble containing plastic waste collection data from the Break Free From Plastic movement.
+A tibble containing plastic waste collection data from the Break Free
+From Plastic movement.
 }
 \description{
-Downloads the environmental plastic waste dataset
-used for temperature and cleanup analysis from the Break Free From Plastic movement.
+Loads a cleaned plastic waste dataset containing plastic types, collection
+counts, and mean annual temperatures for different countries used to analyze
+relationships between plastic collection totals and climate conditions.
 }
